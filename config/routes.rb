@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/myapp_admin', as: 'rails_admin'
+
   devise_for :users, path: '', path_names: { sign_in: 'myapp_login', sign_out: 'myapp_logout' },
              only: [:sessions]
 
